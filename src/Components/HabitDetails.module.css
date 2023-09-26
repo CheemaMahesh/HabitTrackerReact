@@ -1,0 +1,69 @@
+.dummy{
+    height:10vh;
+}
+/* HabitDetails.module.css */
+
+/* Container for the entire component */
+.habitDetailsContainer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  .habitDetails h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the select container */
+  .selectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Styling for individual day selects */
+  .selectContainer div {
+    flex: 1;
+    max-width: 150px;
+  }
+  
+  /* Label styling */
+  .selectContainer label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Select styling */
+  .selectContainer select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  /* Dummy element for spacing */
+  .dummy {
+    height: 11px;
+    width: 100%;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust styling for smaller screens */
+    .selectContainer {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .selectContainer div {
+      max-width: 100%;
+    }
+  }
+  

@@ -1,11 +1,13 @@
 .navbar{
     height:10vh;
-    width: 98.9vw;
-    background-color: red;
-    display: flex;
+    width: 100vw;
+    background-color: #333;
+        display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    color: antiquewhite;
 }
 .title{
     height:100%;
@@ -17,6 +19,7 @@
     font-family: cursive;
     
 }
+
 .addHabbit{
     margin-left: 10vw;
     height:100%;

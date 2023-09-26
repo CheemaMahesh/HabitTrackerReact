@@ -14,6 +14,11 @@ const useValue=()=>{
 
 function HabitContext({children}){
     const [habits,setHabits]=useState([]);
+    const [hdId,setHdId]=useState("");
+// ========================================================================================================
+function goToHDPage(id){
+    setHdId(id);
+}
 
 //============================================================================================================
         //deleting the Habit
@@ -49,6 +54,127 @@ useEffect(() => {
         setHabits(blogs);
     })
 },[]);
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateTody(id,value) {
+        try {
+            if(value===true){
+                value=false;
+            }else if(value===false){
+                value=true;
+            }
+          const habitDocRef = doc(db, "habits", id);
+          await updateDoc(habitDocRef, {
+            today: value 
+          });
+        } catch (error) {
+          console.error("Error updating 'today' field:", error);
+        }
+      }
+      //    =========================================================================================================
+    // Function to Update the Fav value
+    async function updateFav(id,value) {
+        try {
+            if(value===true){
+                value=false;
+            }else if(value===false){
+                value=true;
+            }
+          const habitDocRef = doc(db, "habits", id);
+          await updateDoc(habitDocRef, {
+            fav: value 
+          });
+        } catch (error) {
+          console.error("Error updating 'today' field:", error);
+        }
+      }
+
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateMon(id,value) {
+        try {
+          const habitDocRef = doc(db, "habits", id);
+          await updateDoc(habitDocRef, {
+            mon: value 
+          });
+        } catch (error) {
+          console.error("Error updating 'today' field:", error);
+        }
+      }
+
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateSun(id,value) {
+      try {
+        const habitDocRef = doc(db, "habits", id);
+        await updateDoc(habitDocRef, {
+          sun: value 
+        });
+      } catch (error) {
+        console.error("Error updating 'today' field:", error);
+      }
+    }
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateTue(id,value) {
+      try {
+        const habitDocRef = doc(db, "habits", id);
+        await updateDoc(habitDocRef, {
+          tue: value 
+        });
+      } catch (error) {
+        console.error("Error updating 'today' field:", error);
+      }
+    }
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateThu(id,value) {
+      try {
+        const habitDocRef = doc(db, "habits", id);
+        await updateDoc(habitDocRef, {
+          thu: value 
+        });
+      } catch (error) {
+        console.error("Error updating 'today' field:", error);
+      }
+    }
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateFri(id,value) {
+      try {
+        const habitDocRef = doc(db, "habits", id);
+        await updateDoc(habitDocRef, {
+          fri: value 
+        });
+      } catch (error) {
+        console.error("Error updating 'today' field:", error);
+      }
+    }
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateSat(id,value) {
+      try {
+        const habitDocRef = doc(db, "habits", id);
+        await updateDoc(habitDocRef, {
+          sat: value 
+        });
+      } catch (error) {
+        console.error("Error updating 'today' field:", error);
+      }
+    }
+//    =========================================================================================================
+    // Function to Update the today value
+    async function updateWed(id,value) {
+      try {
+        const habitDocRef = doc(db, "habits", id);
+        await updateDoc(habitDocRef, {
+          wed: value 
+        });
+      } catch (error) {
+        console.error("Error updating 'today' field:", error);
+      }
+    }
+      
 // =====================================================================================================================
 
     //uploading the data to the firebase
@@ -57,13 +183,13 @@ useEffect(() => {
             
     await setDoc(docRef, {
             title: habit,
-            week:{sun:"No-Action",
+            sun:"No-Action",
             mon:"No-Action",
             tue:"No-Action",
             wed:"No-Action",
             thu:"No-Action",
             fri:"No-Action",
-            sat:"No-Action",},
+            sat:"No-Action",
             completed:0,
             today:false,
             fav:false, 
@@ -82,6 +208,17 @@ useEffect(() => {
             handleUpload,
             habits,
             deleteHabbit,
+            updateTody,
+            goToHDPage,
+            hdId,
+            updateFav,
+            updateMon,
+            updateSun,
+            updateTue,
+            updateThu,
+            updateFri,
+            updateSat,
+            updateWed
 
         }}
     >

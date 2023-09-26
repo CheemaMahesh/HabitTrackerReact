@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* HabitsCustom.css */
+.HabitItem {
+  margin-bottom: 20px;
+}
+
+.HabitLabel {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.DeleteButton {
+  background-color: red;
+  color: white;
+}
+
+.InfoButton {
+  background-color: blue;
+  color: white;
+}
+.dummy{height:10vh;}
+
+.Links{
+  text-decoration: none;
+  color: antiquewhite;
+}

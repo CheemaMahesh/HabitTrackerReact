@@ -36,4 +36,4 @@ You may also see any lint errors in the console.)
 <li>Now you are ready to  create your own HabitTracker</li>
 </ol>
 <br/>
-<h2>Create your own Album List app in your style or import the repo and modify it in your style</h2>
+<h2>Create your own HabitTracke app in your style or import the repo and modify it in your style</h2>

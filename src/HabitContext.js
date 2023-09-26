@@ -14,6 +14,17 @@ const useValue=()=>{
 
 function HabitContext({children}){
     const [habits,setHabits]=useState([]);
+
+//============================================================================================================
+        //deleting the Habit
+        async function deleteHabbit(i){
+            try{
+                const docRef=doc(db, "habits",i);
+                deleteDoc(docRef);
+            }catch(err){
+console.log("Error in Deleting the Habit", err);
+            }
+        }
     
 //    =========================================================================================================
     // Function to update the count value in Firebase
@@ -70,6 +81,7 @@ useEffect(() => {
           
             handleUpload,
             habits,
+            deleteHabbit,
 
         }}
     >

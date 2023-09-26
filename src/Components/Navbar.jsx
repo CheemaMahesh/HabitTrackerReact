@@ -35,10 +35,10 @@ export default function Navbar() {
         <div className={styles.addHabbit}>
           <h2 onClick={handleAddHabitClick}>Add Habit</h2>
           {isClicked ? (
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} className={styles.forms}>
               <input placeholder="Habit" value={tHabit} onChange={(e)=>setTHabit(e.target.value)}/>
               <button>Submit</button>
-              <h6 onClick={handleCancel}>Cancel</h6> 
+              <p onClick={handleCancel} className={styles.cancle}>Cancel</p> 
             </form>
           ) : null}
         </div>

@@ -31,3 +31,46 @@
     align-items: center;
 cursor: pointer;
 }
+.forms{
+    display: flex;
+    flex-direction: row;
+    height:2vh;
+    width: 15vw;
+    justify-content: space-around;
+}
+.forms input{
+width: 10vw;
+height: 2vw;
+background-color: white;
+border: 1px solid gray; 
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+border-radius: 0.5rem;
+}
+.forms button{
+    background-color: green;
+    outline: none;
+    border:1px solid rgb(2, 27, 2) ;
+    width: 5vw;
+height: 5vh;
+border-radius: 0.5rem;
+
+}
+.forms button:hover{
+    background-color: rgb(13, 239, 13);
+}
+.cancle{
+    background-color: orangered;
+    outline: none;
+    border:1px solid rgb(2, 27, 2) ;
+    width: 5vw;
+height: 5vh;
+border-radius: 0.7rem;
+margin-top: -0.4vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.cancle:hover{
+    background-color: red;
+}
